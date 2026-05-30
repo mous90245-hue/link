@@ -31,8 +31,5 @@
 }
 
 .bg-app {
-  /* point to the workspace images folder so the asset is available to the app */
-  background-image: url("../../images/wifi-hero.jpg");
-  background-size: 100% 35%;
-  background-repeat: no-repeat;
+  background: linear-gradient(180deg, #0f172a 0%, #111827 70%);
 }

@@ -773,7 +773,7 @@ export default function App() {
   };
 
   return (
-    <SafeAreaView className="flex-1 bg-app">
+    <SafeAreaView style={{ flex: 1, backgroundColor: '#0f172a' }} className="flex-1">
       <StatusBar style="light" />
       <View className="fixed w-full text-white">
         <View className="pb-2 mx-auto max-w-app-margin-12">

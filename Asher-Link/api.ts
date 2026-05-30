@@ -1,6 +1,6 @@
 const RETRY_DELAYS = [1000, 2000, 3000, 5000, 8000];
 
-export const getApiBase = () => global.API_BASE || 'http://172.17.0.2:5000';
+export const getApiBase = () => ((globalThis as any).API_BASE || 'http://172.17.0.2:5000');
 
 export async function fetchWithRetry(url: string, options: RequestInit = {}, retries = 5): Promise<any> {
   for (let attempt = 0; attempt < retries; attempt++) {
