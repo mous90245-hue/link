@@ -13,7 +13,27 @@ import {
   View
 } from 'react-native';
 import AsyncStorage from '@react-native-async-storage/async-storage';
-import { MaterialCommunityIcons } from '@expo/vector-icons';
+import {
+  Activity,
+  Award,
+  ChevronRight,
+  Clock,
+  Gift,
+  HelpCircle,
+  History,
+  Grid as LayoutGrid,
+  Languages,
+  Package,
+  Phone,
+  RefreshCcw,
+  Settings,
+  Sparkles,
+  Star,
+  User,
+  Wifi,
+  X,
+  Zap
+} from 'lucide-react-native';
 import {
   confirmPurchase as apiConfirmPurchase,
   connectTrial as apiConnectTrial,
@@ -24,26 +44,6 @@ import {
   startTrialAd as apiStartTrialAd
 } from './api';
 import NotificationToast from './components/NotificationToast';
-
-const Activity = (props) => <MaterialCommunityIcons name="run-fast" {...props} />;
-const Award = (props) => <MaterialCommunityIcons name="trophy" {...props} />;
-const ChevronRight = (props) => <MaterialCommunityIcons name="chevron-right" {...props} />;
-const Clock = (props) => <MaterialCommunityIcons name="clock" {...props} />;
-const Gift = (props) => <MaterialCommunityIcons name="gift" {...props} />;
-const HelpCircle = (props) => <MaterialCommunityIcons name="help-circle" {...props} />;
-const History = (props) => <MaterialCommunityIcons name="history" {...props} />;
-const LayoutGrid = (props) => <MaterialCommunityIcons name="view-grid" {...props} />;
-const Languages = (props) => <MaterialCommunityIcons name="translate" {...props} />;
-const Package = (props) => <MaterialCommunityIcons name="package-variant" {...props} />;
-const Phone = (props) => <MaterialCommunityIcons name="phone" {...props} />;
-const RefreshCcw = (props) => <MaterialCommunityIcons name="refresh" {...props} />;
-const Settings = (props) => <MaterialCommunityIcons name="cog" {...props} />;
-const Sparkles = (props) => <MaterialCommunityIcons name="sparkles" {...props} />;
-const Star = (props) => <MaterialCommunityIcons name="star" {...props} />;
-const User = (props) => <MaterialCommunityIcons name="account" {...props} />;
-const Wifi = (props) => <MaterialCommunityIcons name="wifi" {...props} />;
-const X = (props) => <MaterialCommunityIcons name="close" {...props} />;
-const Zap = (props) => <MaterialCommunityIcons name="flash" {...props} />;
 
 const DEFAULT_MAC = '00:11:22:33:44:55';
 const DEFAULT_LANGUAGE = 'en';
