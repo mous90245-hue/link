@@ -9,8 +9,7 @@ export default function useNetwork(mac = null) {
       try {
         const ok = await apiCheckNetState(mac);
         if (mounted) setOnline(Boolean(ok));
-      } catch (error) {
-        console.error('Network check failed', error);
+      } catch (_error) {
         if (mounted) setOnline(false);
       }
     })();

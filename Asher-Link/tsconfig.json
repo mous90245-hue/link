@@ -8,6 +8,19 @@
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": ["**/*.ts", "**/*.tsx", "**/*.d.ts"],
-  "exclude": ["node_modules", "dist", "dist-web", "build", "ios", "android"]
+  "include": [
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.d.ts",
+    ".expo/types/**/*.ts",
+    "expo-env.d.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist",
+    "dist-web",
+    "build",
+    "ios",
+    "android"
+  ]
 }

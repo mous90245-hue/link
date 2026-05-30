@@ -9,8 +9,8 @@ export default function useAuth() {
       try {
         const raw = await AsyncStorage.getItem('user');
         if (raw) setUser(JSON.parse(raw));
-      } catch (error) {
-        console.error('useAuth load failed', error);
+      } catch (_error) {
+        // ignore
       }
     })();
   }, []);

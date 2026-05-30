@@ -124,8 +124,8 @@ export default function App() {
       setAutoConnect(stored.auto_connect === 'true');
       setParticles(stored.particles !== 'false');
       if (stored.language) setLanguage(stored.language);
-    } catch (error) {
-      console.error('Failed to load settings', error);
+    } catch (_error) {
+      console.error('Failed to load settings', _error);
     }
   };
 
@@ -138,8 +138,8 @@ export default function App() {
     if (!isMounted.current) return;
     try {
       await AsyncStorage.setItem(key, String(value));
-    } catch (error) {
-      console.error('Failed to save pref', error);
+    } catch (_error) {
+      console.error('Failed to save pref', _error);
     }
   };
 
@@ -159,8 +159,7 @@ export default function App() {
       setPackages(bundles.packages || []);
       const offersData = await fetchUserOffers(DEFAULT_MAC);
       setOffers(Array.isArray(offersData.offers) ? offersData.offers : []);
-    } catch (error) {
-      console.error('Refresh data failed', error);
+    } catch (_error) {
       notify('Unable to refresh data', 'error');
     } finally {
       setLoading(false);
@@ -278,8 +277,7 @@ export default function App() {
       } else {
         notify('Ad failed', 'error');
       }
-    } catch (error) {
-      console.error('Trial completion failed', error);
+    } catch (_error) {
       notify('Ad failed', 'error');
     }
   }, [trialAdData]);
@@ -320,8 +318,7 @@ export default function App() {
         setTokenIconColor('#dc3545');
         notify('Unknown Error', 'error');
       }
-    } catch (error) {
-      console.error('Recharge failed', error);
+    } catch (_error) {
       setTokenIconColor('#dc3545');
       notify('Network Error', 'error');
     } finally {
@@ -338,8 +335,7 @@ export default function App() {
       setTrialTimer(duration);
       setTrialActive(true);
       notify('Trial ad loaded', 'success');
-    } catch (error) {
-      console.error('Ad load failed', error);
+    } catch (_error) {
       notify('Ad failed', 'error');
     } finally {
       setLoading(false);
