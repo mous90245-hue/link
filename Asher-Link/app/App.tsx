@@ -42,8 +42,8 @@ import {
   getBundlesData,
   handleVoucher,
   startTrialAd as apiStartTrialAd
-} from './api';
-import NotificationToast from './components/NotificationToast';
+} from '../api';
+import NotificationToast from '../components/NotificationToast';
 
 const DEFAULT_MAC = '00:11:22:33:44:55';
 const DEFAULT_LANGUAGE = 'en';
